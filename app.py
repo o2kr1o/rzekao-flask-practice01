@@ -1,4 +1,3 @@
-import re
 from flask import Flask
 from flask import render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
@@ -6,7 +5,7 @@ from datetime import datetime, date
 
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///todo2.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///todo.db'
 db = SQLAlchemy(app)
 
 class Post(db.Model):
@@ -74,4 +73,4 @@ def delete(id):
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug = True)

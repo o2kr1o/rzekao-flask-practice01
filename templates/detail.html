@@ -8,6 +8,7 @@
         <h5 class = "ml-3" style = "font-size: 1.1em;">D/L:{{ post.due.date() }}</h5>
         <p>{{ post.detail }}</p>
         <a class = "btn btn-outline-success" href = "/" role = "button">Back</a>
+        <a class = "btn btn-outline-success" href = "/update/{{ post.id }}" role = "button">Update</a>
     </div>
 </div>
 {% endblock %}
